@@ -1,0 +1,5 @@
+
+
+The goals of this project are shown as following:
+
+1. Import Ansible as a tool of deployment in the process of CI/CD, that can avoid ssh-eky exchange as an essential step.

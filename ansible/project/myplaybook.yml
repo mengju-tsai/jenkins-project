@@ -1,0 +1,13 @@
+---
+- name: gather essential info
+  hosts: ec2_instances
+  gather_facts: yes
+  become: true
+  become_method: sudo
+  become_user: root
+
+  tasks:
+    - name: return ip address
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest

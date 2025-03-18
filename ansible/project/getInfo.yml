@@ -1,0 +1,13 @@
+---
+- name: gather essential info
+  hosts: aws
+  gather_facts: yes
+
+  tasks:
+    - name: display hostname
+      ansible.builtin.debug:
+        msg: " {{ ansible_facts.hostname }}"
+
+    - name: display ipv4 address
+      ansible.builtin.debug:
+        msg: "{{ ansible_default_ipv4.address }}"
